@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, Database, Terminal, Users, BarChart2, Activity, Bell, Settings, LogOut, Menu, X, Layers, ExternalLink } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useAdminAuth } from '../hooks/useAdminAuth';
+import { useAdminAuth } from '../../hooks/useAdminAuth';
 import { cn } from '@/lib/utils';
 
 const adminNav = [
