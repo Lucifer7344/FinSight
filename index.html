@@ -2,16 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="FinSight - Personal Finance Tracker" />
-    <title>FinSight</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>FinSight — Personal Finance Tracker</title>
+    <meta name="description" content="Track income, expenses, loans, and savings with beautiful analytics and smart insights. FinSight makes personal finance management effortless." />
+    <meta name="theme-color" content="#059669" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://xendhtdxtkkfrunyjazb.supabase.co" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Favicon SVG -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2310b981'/><stop offset='100%25' stop-color='%2306b6d4'/></linearGradient></defs><rect width='32' height='32' rx='8' fill='url(%23g)'/><path d='M8 22l5-8 4 5 3-4 4 7' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FinSight — Personal Finance Tracker" />
+    <meta property="og:description" content="Track income, expenses, loans, and savings with beautiful analytics." />
+    <meta property="og:type" content="website" />
+
+    <!-- Performance hints -->
+    <link rel="dns-prefetch" href="https://xendhtdxtkkfrunyjazb.supabase.co" />
+
+    <!-- Prevent flash of unstyled content -->
+    <style>
+      body { margin: 0; background: hsl(220, 30%, 97%); font-family: Inter, system-ui, sans-serif; }
+      @media (prefers-color-scheme: dark) { body { background: hsl(222, 35%, 7%); } }
+    </style>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <!-- Register service worker for offline support -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
   </body>
 </html>
